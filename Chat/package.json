@@ -1,0 +1,15 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo No test"
+  },
+  "author": "karan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}

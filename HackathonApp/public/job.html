@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="styles/home.css">
+	<link rel="stylesheet" href="styles/job.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<nav class="navbar">
+		<span class="open-slide">
+			<a href="#" onclick="openSlideMenu()">
+				<svg width="30" height="30">
+					<path d="M0,5 30,5" stroke="#242526" stroke-width="5"/>
+					<path d="M0,14 30,14" stroke="#242526" stroke-width="5"/>
+					<path d="M0,23 30,23" stroke="#242526" stroke-width="5"/>
+			</a>
+			
+		</span>
+		<div class="positon-nav">
+		<ul class="navbar-nav">
+				<li><a href="setting.html">SETTINGS</a></li>
+				<li><a href="quora.html">QUORA TIME</a></li>
+				<li><a class="a" href="job.html">JOB</a></li>
+				<li><a href="profile.html">PROFILE</a></li>
+				<li><a  href="home.html">HOME</a></li>
+		</ul>
+	   </div>
+	</nav>
+	<div id="side-menu" class="side-nav">
+			<a class="btn-close" onclick="closeSideMenu()" href="">&times;</a>
+			<div class="two">
+					<a>Chitkara Talk</a>
+			<a href="index.html">LOGOUT</a>
+			</div>
+	</div>
+
+	
+	<center>
+	<div id="main">
+    	<iframe src="job\index.html"></iframe>
+	</div>
+    </center>
+
+
+
+
+
+
+
+
+
+<script>
+	function openSlideMenu(){
+		document.getElementById('side-menu').style.width = '250px';
+		document.getElementById('main').style.marginLeft = '250px'; 
+	}
+	function closeSideMenu()
+	{
+		document.getElementById('side-menu').style.width = '0';
+		document.getElementById('main').style.marginLeft = '0'; 
+	}
+</script>
+
+</body>
+</html>

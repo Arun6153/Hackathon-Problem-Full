@@ -1,0 +1,26 @@
+{
+    "signUp": "insert into sql12288561.student values ( ?,?,?,?,?,?,?,?,?);" ,
+    "verify": "insert into sql12288561.verify values (?)",
+    "pending": "SELECT * FROM sql12288561.verify;",
+    "confirm"
+            : "update sql12288561.student set verified=1 where studentId = ?;",
+    "reject": "delete from sql12288561.student where studentId = ?;",
+    "remove": "delete from sql12288561.verify where student_studentId = ?;",
+    "login" : "select studentId,studentName,type,verified from sql12288561.student where studentId = ? and password = ? and type = ?;",
+    "getQuestions" 
+            : "select studentName,question,questionId from sql12288561.questions inner join student on questions.student_studentId = student.studentId;",
+     "getStudentInfo"
+            : "select * from student where studentId = ?",
+    "submitQuestion"
+            : "insert into questions (question,student_studentId) values (?,?); ",
+    "getQuestionsById" 
+            : "select * from sql12288561.questions where questionId =  ?",
+    "getAnswers"
+            : "select * from  sql12288561.answers where questions_questionId = ?;",
+    "submitAnswer"
+            : "insert into sql12288561.answers (answer,vote,questions_questionId,questions_student_studentId) values (?,?,?,?);",
+    "getJobs"
+             : "select * from sql12288561.Jobs;",
+    "submitJobs"
+             : "insert into sql12288561.Jobs (jobDesignation,jobPlace,jobType,student_studentId) values(?,?,?,?);"
+}

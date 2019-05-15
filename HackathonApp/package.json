@@ -1,0 +1,26 @@
+{
+  "name": "QuaraTalkApp",
+  "version": "1.0.0",
+  "description": "quara web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./scripts/app.js",
+    "watch": "nodemon ./scripts/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CoolCatBro",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

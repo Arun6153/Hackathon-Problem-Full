@@ -1,0 +1,141 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.open-slide a svg{
+	margin-top:6px;
+}
+.open-slide a:hover{
+	transform: scale(0.8);
+	transition: 0.5s;
+}
+body{
+	background-color:#f4f4f4;
+	overflow-x: hidden;
+	font-family: 'Poppins', sans-serif;
+}
+.navbar{
+	background-color:#5394c6;
+	position: sticky fixed;
+	width: 100%;
+	overflow: hidden;
+	height: 63px;
+	z-index: 100;
+}
+.navbar a{
+	float:left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1.2vw;
+	transition: 0.5s;
+	margin-top: -3px;
+}
+ul li{
+	float: right;
+}
+.position-nav  li{
+	float:right;
+}
+ul li a{
+	color: black;
+	transition: 0.5s;
+}
+.navbar ul{
+	list-style: none;margin: 8px 0 0 0;
+}
+.navbar ul li a:hover{
+	background-color:#242526;
+	color:#ffffff;
+	transition: 0.5s;
+	transform: scale(0.8);
+}
+.side-nav ,.side-nav:after , .side-nav:before{
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 100;
+	top:0;
+	left:0;
+	background-color: #000;
+	opacity:0.9;
+	overflow-x: hidden;
+	padding:60px 0 0 0;
+	transition:all 0.5s;
+}
+.side-nav .two a{
+	padding: 10px 10px 10px 30px;
+	text-decoration: none;
+	font-style: 22px;
+	color:#ffffff;
+	display:block;
+	line-height: 30px;
+	transition: 0.3s;
+}
+.side-nav .two a:hover{
+	color: #ffffff;
+	background-color:#242526;
+	transition: 0.5s;
+	transform: scale(0.9) translateX(30px);
+}
+.fa{
+	color: rgba(0,0,0,.5);
+	margin-left: 15%;
+	font-size: 25px;
+}
+.side-nav:hover .fa{
+	color:white;
+	transform: scale(1.1);
+}
+li .a{
+   border-bottom:2px solid black;
+   border-bottom-width: 6px;
+   color:white;
+}
+#side-menu .btn-close {
+	position: absolute;
+	top:0;
+	right: 22px;
+	font-size:36px;
+	margin-left: 50px;
+	top:3px;
+	color: white;
+	transition: 0.5s;				
+	text-decoration: none;
+	padding: 1px 0;
+}
+#side-menu .btn-close:hover{
+	transform:scale(1.2) rotate(270deg);
+}
+#main{
+	transition: margin-left 0.5s;
+	padding: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+
+
+
+@media screen and (max-width:600px){
+	.navbar-bar{
+		display: none;
+	}
+	.open-slide{
+		display: none;
+	}
+	.navbar a{
+		font-size:11px;
+		padding: 14px 3.9vw;
+
+	}
+	.navbar{
+		height: 54px;
+	}
+}
+

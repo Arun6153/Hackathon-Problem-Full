@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>chat</title>
+    <style>
+      *{ 
+	margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    font: 13px Helvetica, Arial;
+    height: 60vh;
+color:black;
+  }
+
+form {
+     width: 50%;margin-top: 80vh;
+}
+
+form input {
+    border:1px solid black; padding: 10px; width:50vh; margin-right: .5%;border-radius: 10px;
+ }
+
+form button {
+       width: 10vh; background: #6acee0; border:2px solid; padding: 10px; transition: 0.3s;border-radius: 10px;
+   }
+form button:hover{
+	background-color: black;
+	color: white;
+	transition: 0.3s;
+	transform:scale(1.03);
+	border-color: black;
+}
+
+#messages {
+       list-style-type: none; margin: 0; padding: 0; 
+   }
+
+#messages li {
+       padding: 5px 10px;
+        }
+
+#messages li:nth-child(odd) { 
+   background: #6acee0; 
+}
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+          var socket = io();
+          $('form').submit(function(e){
+            e.preventDefault(); // prevents page reloading
+            socket.emit('chat message', $('#m').val());
+            $('#m').val('');
+            return false;
+          });
+          socket.on('chat message', function(msg){
+            $('#messages').append($('<li>').text(msg));
+          });
+        });
+      </script>
+  </head>
+  <body>
+
+    <ul id="messages"></ul>
+    
+    <center>
+      <form action="">
+      <input id="m" autocomplete="off" placeholder="Type in here...">
+      <button>Send</button>
+    </form>
+  </center>
+  </body>
+</html>

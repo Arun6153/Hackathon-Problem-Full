@@ -1,0 +1,21 @@
+{
+    "payload": {
+        "studentId": "",
+        "studentName": "",
+        "type":""
+    },
+
+    "signToken": {
+        "issuer": "TheQuaraApi",
+        "subject": "student",
+        "expiresIn": "12h",
+        "algorithm": "RS256"
+    },
+
+    "verifyToken": {
+        "issuer": "TheQuaraApi",
+        "subject": "student",
+        "expiresIn": "12h",
+        "algorithm": ["RS256"]
+    }
+}

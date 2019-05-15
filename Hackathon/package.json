@@ -1,0 +1,27 @@
+{
+  "name": "QuaraTalkApi",
+  "version": "1.0.0",
+  "description": "api for quare app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./scripts/app.js",
+    "watch": "nodemon ./scripts/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "CoolCatBro",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "body-parser": "^1.18.3",
+    "jsonwebtoken": "^8.5.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
